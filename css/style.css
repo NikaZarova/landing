@@ -1,0 +1,723 @@
+*{
+	margin: 0;     /*убрать автоматическое отступы браузера*/
+	padding: 0;
+	outline: none;     /*убрать автоматическое выделение браузера*/
+	box-sizing: border-box;
+}
+
+@font-face{     /*подключение не установленного шрифта*/
+	font-family: Carton;     /*имя шрифта, его реальное (можно увидеть при открытии шрифта)*/
+	src: url(../fonts/CartonSlab.otf);     /*путь к файлу шрифта*/
+}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	width: 100%;
+	height: 670px;
+	background: #A9D6DE;
+	display: block;
+	float: left;
+	text-align: center;
+}
+
+figure{     /*логотип*/
+	font-family: Carton;
+	color: #3A494C;
+	margin-left: 10%;
+	margin-top: 40px;
+	font-size: 2em;
+	display: flex;
+}
+
+menu{
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -20px;
+	margin-right: 10%;
+}
+
+menu li{
+	display: inline-block;
+}
+
+menu li a{
+	text-decoration: none;
+	color: #3A494C;
+	padding: 0.8em;
+	margin: 0.5em;
+	border-radius: 10px;
+	font-weight: 700;
+}
+
+menu li a:hover{     /*изменения при наведении на элементы верхнего меню*/
+	background: #3A494C;
+	color: #A9D6DE;
+	transition: 0.5s;
+}
+
+.wrapper_slider{
+	width: 80%;
+	height: 400px;
+	padding-top: 5%;
+	color: #FFFFFF;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+}
+
+.wrapper_slider .slider_box{
+	flex-basis: 40%;
+	margin: 1em;
+}
+
+.slider_box img:hover{
+	transform: scale(1.1, 1.1);     /*увеличили изображение монитора при наведении*/   /*увеличение происходит по x и y, т.е. scale(x, y); если значения одинаковые, то масштабирование идёт равномерным*/
+	/*transform: rotate(-90deg);*/     /*повернули изображение монитора при наведении на -90 градусов*/   /*в скобочках нужно указать градус для поворота*/
+	transition: 0.5s;
+}
+
+.fl1{
+	align-self: center;     /*текст выровнялся относительно изображения монитора*/
+	font-size: 2em;
+	text-align: center;
+}
+
+h1{
+	font-family: Carton;
+	padding-top: 1em;
+	text-align: center;
+}
+
+header button{
+	margin: 140px 5px 0px 5px;
+	border: none;
+	background: none;
+	width: 25px;
+	height: 25px;
+	border: 2px solid #FFFFFF;
+	border-radius: 360px;
+	cursor: pointer;
+}
+
+header button:hover{
+	background: #FFFFFF;
+	transition: 0.5s;
+}
+
+.info{
+	width: 100%;
+	height: 520px;
+	background: #FFFFFF;
+	float: left;
+}
+
+.info .box_flex{
+	width: 80%;
+	margin: 100px auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.info .box_flex .box{
+	flex-basis: 20%;     /*ширина текста и иконок второго раздела*/
+	text-align: center;     /*выравнивание текста и иконок второго раздела*/
+}
+
+.info .box_flex .box h4{
+	font-weight: 900;
+	padding-top: 30px;
+	font-size: 1.5em;
+	color: #3A494C;
+}
+
+.info .box_flex .box p{
+	padding-top: 20px;
+	width: 100%;     /*ширина текста под иконками второго раздела*/
+	margin: auto;     /*выравнивание текста под иконками второго раздела*/
+	font-size: 1em;
+	line-height: 1.5em;
+	color: #636161;
+}
+
+.wrapper_work{
+	width: 100%;
+	height: 1320px;
+	background: #98D2A4;
+	float: left;
+	text-align: center;
+	padding-top: 30px;
+	color: #FFFFFF;
+}
+
+.wrapper_work h1{
+	font-size: 3.5em;
+}
+
+.wrapper_work p{
+	padding-top: 30px;
+	line-height: 1.5em;
+	font-weight: 300;
+	font-size: 1.3em;
+	margin-bottom: 50px;
+}
+
+.wrapper_work a{
+	display: inline-block;
+	text-decoration: none;
+	color: #FFFFFF;	
+	text-transform: uppercase;
+	margin-top: 100px;
+	margin: 30px;
+	padding: 15px;
+	border-radius: 10px;
+	border: 2px solid transparent;
+	font-weight: 700;
+}
+
+.wrapper_work a:hover{
+	border: 2px solid #FFFFFF;
+	transition: 0.5s;
+}
+
+a.active{
+	color: #A2A3A3;
+	background: #FFFFFF;
+}
+
+.photo_gallery{
+	width: 80%;
+	margin: 50px auto;
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+
+.photo_gallery .box_photo{
+	flex-basis: 30%;
+	margin: 30px 0px;
+}
+
+.photo_gallery .box_photo img:hover{
+	transform: scale(1.1, 1.1);     /*увеличили изображение монитора при наведении*/   /*увеличение происходит по x и y, т.е. scale(x, y); если значения одинаковые, то масштабирование идёт равномерным*/
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+.wrapper_work button{
+	border: none;
+	background: #FFFFFF;
+	color: #A2A3A3;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 1em 1.5em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: 50px;
+}
+
+.wrapper_work button:hover{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+}
+
+.wrapper_template{
+	width: 100%;
+	height: 1050px;
+	float: left;
+	background: #F0F1F0;
+}
+
+.wrapper_template .wrapper_template_box{
+	width: 80%;
+	margin: 80px auto;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.wrapper_template_box .template_text{
+	flex-basis: 30%;
+}
+
+.template_text img{
+	width: 100%;
+}
+
+.wrapper_template_box .template_text:nth-child(2){
+	flex-basis: 60%;
+	margin-left: 80px;
+	padding-top: 40px;
+}
+
+.wrapper_template_box .template_text h3{
+	font-size: 1.5em;
+}
+
+.wrapper_template_box .template_text p{
+	padding: 50px 0 60px 0;
+	color: #919191;
+	line-height: 1.5em
+}
+
+.template_text button{
+	border: none;
+	background: #98D2A4;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 1em 1.5em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.template_text button:hover{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+}
+
+.wrapper_template .wrapper_template_box2{
+	width: 80%;
+	margin: 80px auto;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.wrapper_template_box2 .template_text2{
+	flex-basis: 60%;
+}
+
+.template_text2 img{
+	width: 100%;
+}
+
+.wrapper_template_box2 .template_text2:nth-child(2){
+	flex-basis: 30%;
+	margin-left: 80px;
+}
+
+.wrapper_template_box2 .template_text2 h3{
+	font-size: 1.5em;
+	padding-top: 45px;
+	color: #3A494C;
+}
+
+.wrapper_template_box2 .template_text2 p{
+	padding: 50px 0 60px 0;
+    color: #636161;
+    line-height: 1.5em
+}
+
+.template_text2 button{
+	border: none;
+	background: #A9D6DE;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 1em 1.5em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.template_text2 button:hover{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+}
+
+section .line{
+	border: none;
+	background: #D9D9D9;
+	width: 80%;
+	height: 1.5px;
+	margin: auto;
+}
+
+.wrapper_meet{
+	width: 100%;
+	height: 950px;
+	background: #DEB5C4;
+	float: left;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.wrapper_meet h1{
+	font-size: 3.5em;
+}
+
+.wrapper_meet p{
+	padding: 50px;
+	line-height: 1.5em;
+	font-weight: 300;
+	font-size: 1.3em;
+	margin-bottom: -1.5em;
+}
+
+.meet_flex{
+	width: 80%;
+	margin: 40px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.meet_flex .meet_box{
+	flex-basis: 28%;
+	margin: 20px;
+	background: #FFFFFF;
+}
+
+.meet_flex .meet_box img{
+	width: 100%;
+}
+
+.meet_flex .meet_box h3{
+	color: #3A494C;
+	font-family: 'Carton';
+	font-size: 2.5em;
+	padding: 0.5em;
+}
+
+.meet_flex .meet_box .creative{
+	font-size: 1.2em;
+	margin-top: -1.2em;
+	font-weight: 700;
+}
+
+.meet_flex .meet_box p{
+	color: #636161;
+	font-size: 1.2em;
+	padding: 1em 1em 1.5em 1em;
+	margin-top: -1.5em;
+	width: 80%;
+	margin: auto;
+	margin-top: -30px;
+}
+
+.meet_box i{
+	padding: 1em 0.2em;
+	font-size: 1.5em;
+	margin-top: -40px;
+}
+
+.fa-facebook{
+	color: #3964AB;
+}
+
+.fa-twitter{
+	color: #4FBDDD;
+}
+
+.fa-pinterest-p{
+	color: #C92727;
+}
+
+.meet_box:hover{
+	transform: scale(1.1, 1.1);     /*увеличили изображение монитора при наведении*/   /*увеличение происходит по x и y, т.е. scale(x, y); если значения одинаковые, то масштабирование идёт равномерным*/
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+.posts{
+	width: 100%;
+	height: 1020px;
+	background: #A9D6DE;
+	float: left;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.posts h1{
+	font-size: 3.5em;
+}
+
+.posts p{
+	padding-top: 30px;
+	line-height: 1.5em;
+	font-weight: 300;
+	font-size: 1.3em;
+	margin-bottom: 50px;
+}
+
+.post_flex{
+	width: 80%;
+	height: auto;
+	margin: 40px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+.post_flex .post_box{
+	flex-basis: 40%;
+	background: #FFFFFF;
+	margin: 40px;
+}
+
+.post_flex .post_box img{
+	width: 100%;
+}
+
+.post_flex .post_box h3{
+	color: #3A494C;
+	padding: 0.5em;
+	font-size: 1.5em;
+}
+
+.post_flex .post_box .october{
+	font-style: italic;
+	font-size: 14px;
+	margin-top: -1em;
+}
+
+.post_flex .post_box p{
+	color: #636161;
+	font-size: 1em;
+	margin-top: -4em;
+	padding: 1.5em;
+}
+
+.posts button{
+	border: none;
+	background: #FFFFFF;
+	color: #A9D6DE;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 1em 1.5em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.posts button:hover{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+}
+
+.post_box:hover{
+	transform: scale(1.1, 1.1);     /*увеличили изображение монитора при наведении*/   /*увеличение происходит по x и y, т.е. scale(x, y); если значения одинаковые, то масштабирование идёт равномерным*/
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+	transition: 0.5s;
+}
+
+footer{
+	width: 100%;
+	height: 1140px;
+	background: #3C3C3C;
+	float: left;
+	text-align: center;
+}
+
+footer h1{
+	color: #D3D0D0;
+	font-family: 'Carton';
+	font-size: 3.5em;
+	padding-top: 1em;
+}
+
+footer p{
+	color: #D3D0D0;
+	padding-top: 30px;
+	line-height: 1.5em;
+	font-weight: 300;
+	font-size: 1.3em;
+	padding-bottom: 50px;
+}
+
+footer form{
+	width: 760px;
+	height: auto;
+	margin: 100px auto;
+}
+
+footer form input{
+	border: none;
+	width: 720px;
+	padding: 20px;
+	background: #FFFFFF;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+footer form textarea{
+	border: none;
+	width: 720px;
+	height: 210px;
+	padding: 20px;
+	background: #FFFFFF;
+	border-radius: 10px;
+}
+
+.wrapper_footer{
+	width: 80%;
+	height: auto;
+	margin: auto;
+}
+
+.wrapper_footer .line{
+	border: none;
+	width: 100%;
+	height: 1.5px;
+	background: #313131;
+	margin-top: 30px;
+}
+
+.wrapper_footer button{
+	border: none;
+	background: #FFFFFF;
+	color: #3C3C3C;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 1em 1.5em;
+	font-size: 1.2em;
+	border-radius: 10px;
+	cursor: pointer;
+	margin-top: -3em;
+	margin-bottom: 50px;
+}
+
+.wrapper_footer button:hover{
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+	transition: 0.5s;
+}
+
+footer .footer_copy{
+	width: 80%;
+	margin: 60px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer .footer_copy .box_icon{
+	flex-basis: 40%;
+}
+
+.box_icon i{
+	font-size: 3em;
+	margin-left: 0.5em;
+	color: #525252;
+}
+
+.box_icon:nth-child(2){
+	color: #A2A3A3;
+	margin-top: 10px;
+	text-align: right;
+}
+
+.box_icon span{
+	color: #FED67F;
+}
+
+@media (min-width: 320px) and (max-width: 485px){     /*тут мы пожстаиваем наш код под какое-то другое устройство, где минимальная ширина экрана 320px, а максимальная 485px*/
+	/*body{
+		background: #D04141;
+	}
+
+	menu{
+		display: none;
+	}
+
+	.slider_box h1{
+		font-size: 0.5em;
+	}
+*/
+	.wrapper_work{
+		height: auto;
+		padding-bottom: 40px;
+	}
+
+	.menu2{
+		display: none;
+	}
+	.photo_gallery{
+		width: 95%;
+		margin: 30px auto;
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	.photo_gallery .box_photo{
+		flex-basis: 30%;
+		margin: 30px 0px;
+		margin-top: -1em;
+	}
+
+	.box_photo img{
+		width: 90%;
+	}
+
+	.photo_gallery .box_photo img:hover{
+		transform: scale(1.1, 1.1);     /*увеличили изображение монитора при наведении*/   /*увеличение происходит по x и y, т.е. scale(x, y); если значения одинаковые, то масштабирование идёт равномерным*/
+		box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+		transition: 0.5s;
+	}
+
+	.wrapper_work button{
+		border: none;
+		background: white;
+		color: #6A6868;
+		text-transform: uppercase;
+		font-weight: 900;
+		padding: 1em 1.5em;
+		font-size: 1.2em;
+		border-radius: 5px;
+		cursor: pointer;
+	}
+
+	.wrapper_template .wrapper_template_box{
+		width: 95%;
+		margin: 80px auto;
+		display: flex;
+		justify-content: flex-start;
+		flex-direction: column;
+	}
+
+	.wrapper_template_box .template_text{
+		flex-basis: 30%;
+	}
+
+	.template_text img{
+		width: 100%;
+	}
+
+	.wrapper_template_box .template_text:nth-child(2){
+		flex-basis: 60%;
+		margin-left: 0px;
+		padding-top: 20px;
+		text-align: justify;
+		padding: 0.5em
+	}
+
+	.wrapper_template_box .template_text h3{
+		font-size: 1.5em;
+	}
+
+	.wrapper_template_box .template_text p{
+		padding: 20px 0 20px 0;
+		color: #919191;
+		line-height: 1.5em
+	}
+
+	.template_text button{
+		border: none;
+		background: #9ad4a6;
+		color: #fff;
+		text-transform: uppercase;
+		font-weight: 900;
+		padding: 0.9em 1.2em;
+		font-size: 1.2em;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-left: 18%;
+	}
+
+	.template_text button:hover{
+		box-shadow: 0 0 15px rgba(0,0,0,0.3);
+		transition: 0.5s
+	}
+}
